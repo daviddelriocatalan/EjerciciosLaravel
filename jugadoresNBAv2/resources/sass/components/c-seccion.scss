@@ -1,0 +1,93 @@
+.c-seccion{
+    display: grid;
+    grid-template-areas: 
+    "titulo"
+    "contenido";
+    background-color: white;
+    justify-content: center;
+
+    &__titulo{
+        grid-area: titulo;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-right: auto;
+        margin-left: auto;
+        color:#000000;
+        text-align: center;
+        font-size: 36px;
+        font-weight: lighter;
+    }
+
+    &__contenido{
+        grid-area: contenido;     
+        
+        margin: 0px 240px;
+        text-align: justify;
+        
+    }
+    
+    &__boton{
+        text-align: center;
+    }
+
+    &--justify-content-right{
+        justify-content: right;
+    }
+
+    &--justify-content-left{
+        justify-content: left;
+    }
+
+    &--background-color-azul-marino{
+        background-color: #004481;
+    }
+
+    &--background-color-azul-oscuro{
+        background-color: #072146;
+    }
+
+    &--background-color-negro{
+        background-color: black;
+    }
+
+    &--background-image{
+        background-image: url("../img/bancaPrivada.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        /*background-size: 75% 100%;*/
+    }
+
+    $sizes: (Cero, 0px),(XS, 5px), (S, 10px), (M, 15px), (L, 20px), (XL, 40px), (XXL, 80px);
+    @each $name, $size in $sizes {
+        &--padding-#{$name}{
+            padding: $size;
+        }
+
+        &--padding-top-#{$name}{
+            padding-top: $size;
+        }
+
+        &--padding-bottom-#{$name}{
+            padding-bottom: $size;
+        }
+
+        &--padding-left-#{$name}{
+            padding-left: $size;
+        }
+
+        &--padding-right-#{$name}{
+            padding-right: $size;
+        }
+
+        &--padding-vertical-#{$name}{
+            padding-left: $size;
+            padding-right: $size;
+        }
+
+        &--padding-horizontal-#{$name}{
+            padding-top: $size;
+            padding-bottom: $size;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.c-menu{
+    display: flex;
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0px;
+    padding: 15px;
+    padding-bottom: 30px;
+    
+    &__elemento{    
+        display: inline-block;
+        width: 175px;
+        height: 30px;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    &__elemento--derecha{
+        margin-left: auto;
+    }
+    
+    &__enlace{
+        text-decoration: none;
+        color: goldenrod;
+        font-family: fantasy;
+        font-weight: normal;
+    }
+    
+    &__enlace:hover{
+        color: white;
+    }
+}
